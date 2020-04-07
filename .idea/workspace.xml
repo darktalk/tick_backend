@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eeb5d032-e209-4200-95a3-1d0444531fab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/tick/service/impl/LoginServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/tick/service/impl/LoginServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/tick/service/impl/LoginServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/tick/service/impl/LoginServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tick_backend-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/tick_backend-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tick_backend-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/tick_backend-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tick_backend-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/tick_backend-1.0-SNAPSHOT.jar.original" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YmSQB4BAYOPqJMJm3xpmUuzxWi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="true" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.19386332" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/tick/pojo/http" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="tick_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.tick.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.tick.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eeb5d032-e209-4200-95a3-1d0444531fab" name="Default Changelist" comment="" />
+      <created>1583546257091</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583546257091</updated>
+      <workItem from="1583546258732" duration="13546000" />
+      <workItem from="1583637810077" duration="20625000" />
+      <workItem from="1583752103261" duration="715000" />
+      <workItem from="1583758707158" duration="8760000" />
+      <workItem from="1584081145960" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583567293725">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="424" y="202" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1583567293725" />
+    <state x="1031" y="308" key="#com.intellij.ide.util.MemberChooser" timestamp="1583766761628">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="773" y="231" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1583647169749" />
+    <state x="800" y="249" key="#com.intellij.ide.util.MemberChooser/45.23.1875.1057@45.23.1875.1057" timestamp="1583672972738" />
+    <state x="1031" y="308" key="#com.intellij.ide.util.MemberChooser/719.1440.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1583766761628" />
+    <state x="968" y="455" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583752234079">
+      <screen x="45" y="23" width="2515" height="1417" />
+    </state>
+    <state x="968" y="455" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/719.1463.1440.877/45.23.2515.1417@45.23.2515.1417" timestamp="1583752234079" />
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom" timestamp="1583586536643">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1583586536643" />
+    <state width="1878" height="304" key="GridCell.Tab.0.bottom/45.23.1875.1057@45.23.1875.1057" timestamp="1583567877230" />
+    <state width="1878" height="304" key="GridCell.Tab.0.center" timestamp="1583586536642">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="304" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1583586536642" />
+    <state width="1878" height="304" key="GridCell.Tab.0.center/45.23.1875.1057@45.23.1875.1057" timestamp="1583567877228" />
+    <state width="1878" height="304" key="GridCell.Tab.0.left" timestamp="1583586536641">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="304" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1583586536641" />
+    <state width="1878" height="304" key="GridCell.Tab.0.left/45.23.1875.1057@45.23.1875.1057" timestamp="1583567877227" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right" timestamp="1583586536643">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="304" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1583586536643" />
+    <state width="1878" height="304" key="GridCell.Tab.0.right/45.23.1875.1057@45.23.1875.1057" timestamp="1583567877229" />
+    <state width="1878" height="304" key="GridCell.Tab.1.bottom" timestamp="1583586536645">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="304" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1583586536645" />
+    <state width="1878" height="304" key="GridCell.Tab.1.bottom/45.23.1875.1057@45.23.1875.1057" timestamp="1583567877232" />
+    <state width="1878" height="304" key="GridCell.Tab.1.center" timestamp="1583586536644">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="304" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1583586536644" />
+    <state width="1878" height="304" key="GridCell.Tab.1.center/45.23.1875.1057@45.23.1875.1057" timestamp="1583567877231" />
+    <state width="1878" height="304" key="GridCell.Tab.1.left" timestamp="1583586536644">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="304" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1583586536644" />
+    <state width="1878" height="304" key="GridCell.Tab.1.left/45.23.1875.1057@45.23.1875.1057" timestamp="1583567877230" />
+    <state width="1878" height="304" key="GridCell.Tab.1.right" timestamp="1583586536645">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="304" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1583586536645" />
+    <state width="1878" height="304" key="GridCell.Tab.1.right/45.23.1875.1057@45.23.1875.1057" timestamp="1583567877232" />
+    <state x="520" y="213" key="Maven.ArtifactSearchDialog" timestamp="1583566325570">
+      <screen x="45" y="23" width="1875" height="1057" />
+    </state>
+    <state x="520" y="213" key="Maven.ArtifactSearchDialog/45.23.1875.1057@45.23.1875.1057" timestamp="1583566325570" />
+    <state x="625" y="239" key="SettingsEditor" timestamp="1583752217056">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="469" y="179" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1583567507431" />
+    <state x="625" y="239" key="SettingsEditor/719.1440.1440.900/0.0.2560.1440@0.0.2560.1440" timestamp="1583752217056" />
+    <state x="574" y="276" width="816" height="550" key="find.popup" timestamp="1583661620566">
+      <screen x="45" y="23" width="1875" height="1057" />
+    </state>
+    <state x="574" y="276" width="816" height="550" key="find.popup/45.23.1875.1057@45.23.1875.1057" timestamp="1583661620566" />
+  </component>
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 配置类别名 -->
+    <typeAliases>
+        <typeAlias alias="Task" type="com.tick.pojo.mybatis.Task"/>
+        <typeAlias alias="TickRecord" type="com.tick.pojo.mybatis.TickRecord"/>
+    </typeAliases>
+
+    <!-- 配置mysql连接 -->
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://127.0.0.1:3306/tick_task?useUnicode=true&amp;characterEncoding=UTF-8"/>
+                <property name="username" value="root"/>
+                <property name="password" value=""/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!-- 配置mapper -->
+    <mappers>
+        <mapper resource="tick_task_record.xml"/>
+        <mapper resource="task_mapper.xml"/>
+    </mappers>
+</configuration>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tick.mapper.TaskMapper">
+    <resultMap type="Task" id="TaskResult">
+        <result property="taskId" column="id"/>
+        <result property="telephone" column="telephone"/>
+        <result property="name" column="name"/>
+        <result property="describe" column="describe"/>
+        <result property="period" column="period"/>
+        <result property="date" column="date"/>
+    </resultMap>
+
+    <select id="getTasks" resultMap="TaskResult">
+       select id, telephone, `name`, `describe`, period, `date` from task
+       where telephone = #{telephone}
+    </select>
+
+    <update id="updateTickTask">
+       update  task  set `name`=#{name}, `describe`=#{describe}, `period`=#{period},
+       `date` = #{date}
+       where id = #{taskId}
+    </update>
+
+    <delete id="deleteTickTask">
+        delete from task where id = #{taskId} and telephone=#{telephone}
+    </delete>
+
+
+    <insert id="addTickTask">
+       insert into task (`telephone`, `name`, `describe`, `period`, `date`) values(#{telephone}, #{name}, #{describe}, #{period}, #{date})
+    </insert>
+
+</mapper>

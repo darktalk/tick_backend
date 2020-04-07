@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tick.mapper.TickRecordMapper">
+    <resultMap type="TickRecord" id="TickRecordResult">
+        <result property="recordId" column="id"/>
+        <result property="taskId" column="task_id"/>
+        <result property="date" column="date"/>
+    </resultMap>
+
+    <select id="getTickRecords" resultMap="TickRecordResult">
+       select id, task_id, `date` from tick_record
+       where task_id = #{taskId}
+    </select>
+
+    <delete id="removeTickRecord">
+       delete from tick_record where task_id = #{taskId} and `date` = #{date}
+    </delete>
+
+    <delete id="removeTaskTickRecord">
+       delete from tick_record where task_id = #{taskId}
+    </delete>
+
+    <insert id="addTickRecord">
+       insert into tick_record (task_id, `date`) values (
+            #{taskId},
+            #{date}
+       )
+    </insert>
+
+
+
+</mapper>
