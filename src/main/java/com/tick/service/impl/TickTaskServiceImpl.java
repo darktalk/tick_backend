@@ -18,14 +18,20 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 
+/**
+ * @author lintong
+ */
 @Service
 public class TickTaskServiceImpl implements TickTaskService {
     private static final Logger LOG = LoggerFactory.getLogger(TickTaskServiceImpl.class);
+    public static final String RemoveType = "remove";
 
     @Override
     public GetTickTaskResponse requestTasks(GetTickTaskRequest request) {
         GetTickTaskResponse response = new GetTickTaskResponse();
         List<Map<String, Object>> responseUnits = new LinkedList<>();
+
+        // 根据电话取出对应的任务信息
         List<Task> tasks = getTasks(request.getTelephone());
 
         Date date = Calendar.getInstance().getTime();
@@ -33,6 +39,7 @@ public class TickTaskServiceImpl implements TickTaskService {
         String today = dateFormat.format(date);
 
         for (Task task : tasks) {
+            // 对每个任务，采集打卡详细信息
             List<TickRecord> tickRecords = getTickRecords(task.getTaskId());
             GetTickTaskResponseUnit unit = new GetTickTaskResponseUnit();
             unit.setDate(task.getDate());
@@ -48,6 +55,7 @@ public class TickTaskServiceImpl implements TickTaskService {
                 LOG.info("check record:{}", record.toString());
                 LOG.info("check today:{}", today);
                 tickDateList.add(record.getDate());
+                // 今天是否也要打卡
                 if (record.getDate().equals(today)) {
                     unit.setTickedToday(true);
                 }
@@ -61,80 +69,80 @@ public class TickTaskServiceImpl implements TickTaskService {
         return response;
     }
 
+    /*
+     * 更新任务信息
+     */
     @Override
     public BaseResponse updateTask(UpdateTickTaskRequest request) {
-        SqlSession session = new MybatisSupplier().get().getSession();
-        TaskMapper mapper = session.getMapper(TaskMapper.class);
-        mapper.updateTickTask(request.getName(), request.getDescribe(), request.getPeriod(),
-                TDate.format(request.getDate()), request.getId());
-        session.close();
-        BaseResponse response = new BaseResponse();
-        response.setRetCode(0);
-        response.setMsg("update task success");
-        return response;
+        try(SqlSession session = new MybatisSupplier().get().getSession()) {
+            TaskMapper mapper = session.getMapper(TaskMapper.class);
+            mapper.updateTickTask(request.getName(), request.getDescribe(), request.getPeriod(),
+                    TDate.format(request.getDate()), request.getId());
+            BaseResponse response = new BaseResponse();
+            response.setRetCode(0);
+            response.setMsg("update task success");
+            return response;
+        }
     }
 
     @Override
     public BaseResponse removeTask(RemoveTickTaskRequest request) {
-        SqlSession session = new MybatisSupplier().get().getSession();
-        TaskMapper mapper = session.getMapper(TaskMapper.class);
-        // 先删除任务
-        mapper.deleteTickTask(request.getTaskId(), request.getTelephone());
-        TickRecordMapper tickRecordMapper = session.getMapper(TickRecordMapper.class);
-        // 再删除打卡记录
-        tickRecordMapper.removeTaskTickRecord(request.getTaskId());
-        session.close();
+        try(SqlSession session = new MybatisSupplier().get().getSession()) {
+            TaskMapper mapper = session.getMapper(TaskMapper.class);
+            // 先删除任务
+            mapper.deleteTickTask(request.getTaskId(), request.getTelephone());
+            TickRecordMapper tickRecordMapper = session.getMapper(TickRecordMapper.class);
+            // 再删除打卡记录
+            tickRecordMapper.removeTaskTickRecord(request.getTaskId());
 
-        BaseResponse response = new BaseResponse();
-        response.setRetCode(0);
-        response.setMsg("update task success");
-        return response;
+            BaseResponse response = new BaseResponse();
+            response.setRetCode(0);
+            response.setMsg("update task success");
+            return response;
+        }
     }
 
     @Override
     public AddTickTaskResponse addTask(AddTickTaskRequest request) {
-        SqlSession session = new MybatisSupplier().get().getSession();
-        TaskMapper mapper = session.getMapper(TaskMapper.class);
-        Long id = mapper.addTickTask(request.getTelephone(), request.getName(), request.getDescribe(), request.getPeriod(), TDate.format(request.getDate()));
-        session.close();
-        AddTickTaskResponse response = new AddTickTaskResponse();
-        response.setRetCode(0);
-        response.setMsg("add task success");
-        response.setId(id);
-        return response;
+        try(SqlSession session = new MybatisSupplier().get().getSession()) {
+            TaskMapper mapper = session.getMapper(TaskMapper.class);
+            Long id = mapper.addTickTask(request.getTelephone(), request.getName(), request.getDescribe(), request.getPeriod(), TDate.format(request.getDate()));
+            AddTickTaskResponse response = new AddTickTaskResponse();
+            response.setRetCode(0);
+            response.setMsg("add task success");
+            response.setId(id);
+            return response;
+        }
     }
 
     @Override
     public BaseResponse updateTickRecord(UpdateTickRecordRequest request) {
-        SqlSession session = new MybatisSupplier().get().getSession();
-        TickRecordMapper mapper = session.getMapper(TickRecordMapper.class);
-        if (request.getType().equals("remove")) {
-            mapper.removeTickRecord(request.getTaskId(), TDate.format(request.getDate()));
-        } else {
-            mapper.addTickRecord(request.getTaskId(), TDate.format(request.getDate()));
+        try (SqlSession session = new MybatisSupplier().get().getSession()) {
+            TickRecordMapper mapper = session.getMapper(TickRecordMapper.class);
+            if (RemoveType.equals(request.getType())) {
+                mapper.removeTickRecord(request.getTaskId(), TDate.format(request.getDate()));
+            } else {
+                mapper.addTickRecord(request.getTaskId(), TDate.format(request.getDate()));
+            }
+            BaseResponse response = new BaseResponse();
+            response.setRetCode(0);
+            response.setMsg("update tick task record success");
+            return response;
         }
-        BaseResponse response = new BaseResponse();
-        response.setRetCode(0);
-        response.setMsg("update tick task record success");
-        return response;
     }
 
     private List<Task> getTasks(String telephone) {
-        SqlSession session = new MybatisSupplier().get().getSession();
-        TaskMapper mapper = session.getMapper(TaskMapper.class);
-        List<Task> tasks = mapper.getTasks(telephone);
-        session.close();
-
-
-        return tasks;
+        try (SqlSession session = new MybatisSupplier().get().getSession()) {
+            TaskMapper mapper = session.getMapper(TaskMapper.class);
+            return mapper.getTasks(telephone);
+        }
     }
 
     private List<TickRecord> getTickRecords(Long taskId) {
-        SqlSession session = new MybatisSupplier().get().getSession();
-        TickRecordMapper mapper = session.getMapper(TickRecordMapper.class);
-        List<TickRecord> tickRecords = mapper.getTickRecords(taskId);
-        session.close();
-        return tickRecords;
+        try(SqlSession session = new MybatisSupplier().get().getSession()) {
+            TickRecordMapper mapper = session.getMapper(TickRecordMapper.class);
+            return mapper.getTickRecords(taskId);
+        }
     }
 
 }

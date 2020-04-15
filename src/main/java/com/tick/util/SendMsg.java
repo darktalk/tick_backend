@@ -25,7 +25,6 @@ public class SendMsg {
 
             SmsClient client = new SmsClient(cred, "ap-guangzhou", clientProfile);
 
-           
             System.out.println(params);
             SendSmsRequest req = SendSmsRequest.fromJsonString(params, SendSmsRequest.class);
 
